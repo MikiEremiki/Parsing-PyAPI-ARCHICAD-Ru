@@ -1,0 +1,122 @@
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="Author" content="###_author_###">
+        <title>Python API</title>
+    
+    <meta http-equiv="Content-Language" content="en-US">
+    <link rel="stylesheet" type="text/css" href="StyleLibrary/Style.css">
+    <meta name="Microsoft.Help.F1" content="Index.html">
+    <xml>
+      <MSHelp:Attr Name = "DocSet" Value = "GRAPHISOFT"/>
+    </xml>
+</head>
+<body>
+<div id="docBegin">
+  <p id="graphisoft_title">&nbsp;<span>GRAPHISOFT&reg;</span></p>
+  <p class="hdr"><span class="TitleMain">Python&nbsp;API</span><span class="TitleVersion">Version: 0.23 Beta</span></p>
+</div>
+<div id="content" class="inset">
+
+        <h1>Python API</h1>
+
+        <p>
+            Python API is an Add-On, which can be run inside ARCHICAD. It implements a python wrapper for the existing C/C++ API.<br />
+            Please note the current state is experimental, this may not be the final solution. The final choice depends on the real user requirements.<br />
+            Python API является надстройкой, которая может быть запущена внутри ARCHICAD. Он реализует оболочку python для существующего C / C++ API.<br />
+            Обратите внимание, что текущее состояние является экспериментальным, это не будет финальным решением. Окончательный выбор зависит от реальных требований пользователя.
+        </p>
+            This Add-On provides a palette to run external python scripts and implements an interactive Python console with builtin
+            functions to operate ARCHICAD. The Python Palette can be opened from the Window/Palettes menu.<br />
+            Это дополнение предоставляет панель для запуска внешних скриптов python и реализует интерактивную консоль Python
+            со встроенным интерфейсом функций для того чтобы привестись в действие ARCHICAD.
+            Панель Python можно открыть из меню Окно / Панели.
+        </p>
+        <p>
+            Each type and function displayed in this documentation is part of the GS module,
+            but the Interpreter automatically imports everything from this module upon startup.<br />
+            Каждый тип и функция, отображаемые в этой документации, являются частью модуля GS, но интерпретатор автоматически импортирует все из этого модуля при запуске.
+        </p>
+
+        <h2>Installation</h2>
+
+        <h3>Step-by-step guide to install Python API Add-On</h3>
+
+        <p>
+        <ul>
+            <li>
+            Python 3.7 must be installed to your machine. ARCHICAD searches for python at your computer. On macOS it searchs at the following fixed path: /Library/Frameworks/Python.framework/Versions. On Windows platform it uses PATH environment variable, so please add the path to the installed python to your PATH environment variable.<br/>
+            You can download Python installer for free from the official site of Python:<br/>
+            Download Python 3.7 installer for macOS: <a href="https://www.python.org/ftp/python/3.7.3/python-3.7.3-macosx10.9.pkg">https://www.python.org/ftp/python/3.7.3/python-3.7.3-macosx10.9.pkg</a><br>
+            Download Python 3.7 installer for Windows: <a href="https://www.python.org/ftp/python/3.7.3/python-3.7.3-amd64.exe">https://www.python.org/ftp/python/3.7.3/python-3.7.3-amd64.exe</a><br>
+            </li>
+            <li>
+            Place the <strong>PythonSnippets</strong> Add-On into the Add-Ons folder next to the ARCHICAD application. This way ARCHICAD will automatically load it upon startup.
+            </li>
+        </ul>
+        </p>
+
+        <h3>Setup Example Scripts</h3>
+
+        <p>
+            The example scripts can be found inside the <a href="PythonSnippets">PythonSnippets</a> folder.<br />
+            Copy this folder to your user's Documents folder to make all of those example scripts visible inside ARCHICAD in the Script List.<br />
+            Примеры скриптов можно найти в папке PythonSnippets.<br />
+            Скопируйте эту папку в папку Documents вашего пользователя (например, c:\Users\Misha-PC\Documents\), чтобы сделать все эти примеры скриптов видимыми
+            внутри ARCHICAD в списке сценариев.
+        </p>
+
+        <h2>How To Use</h2>
+
+        <p>
+            The palette that contains both the <strong>Interactive Console</strong> and the
+            <strong>Script List</strong> can be opened through Palettes menu.<br />
+            The <strong>Script List</strong> shows the external python scripts (files with .py extension)
+            from the folder named PythonSnippets inside the actual users Documents folder.
+            Of course scripts can be used from any other directory using the Browse button.<br />
+            Панель, которая содержит как <strong>Интерактивную консоль</strong>, так и <strong>Список скриптов</strong> можно открыть через меню панели.<br />
+            В <strong>списке скриптов</strong> отображаются внешние скрипты python (файлы с расширением .py) из папки с именем PythonSnippets
+            внутри папки фактические документы пользователей.
+            Конечно, скрипты можно использовать из любого другого каталога, используя кнопку обзора.
+        </p>
+        <p>
+            By double clicking on a script in the <strong>Script List</strong> or clicking <strong>"Run Selected"</strong> button the
+            selected external python script will be executed.<br />
+            Type single python command into the Interactive Console and press Enter button to execute it.<br />
+            Errors and the output will be printed to the <strong>Interactive Console</strong>.<br />
+            При двойном щелчке на скрипте в <strong>Списке Скриптов</strong> или при нажатии кнопки <strong>"Запустить Выбранный"</strong>
+            будет выполнен выбранный внешний скрипт python.<br />
+            Введите одну команду python в интерактивную консоль и нажмите кнопку Enter, чтобы выполнить ее.<br />
+            Ошибки и вывод будут выведены на <strong>Интерактивную Консоль</strong>.
+        </p>
+        <p>
+            Note, the <strong>sys.argv</strong> is always filled by the interpreter:
+            <ul>
+                <li>The value of <strong>sys.argv[0]</strong> is the location of the executed script file.</li>
+                <li>The value of <strong>sys.argv[1]</strong> is the location of the PythonSnippets Add-On.</li>
+            </ul>
+        </p>
+        <blockquote><pre><code class="python">import os
+import sys
+scriptDir = os.path.dirname (sys.argv[0])
+addOnDir = os.path.dirname (sys.argv[1])</code></pre></blockquote>
+
+        <h2><a href="Functions/Functions.html">Functions</a></h2>
+        <h2><a href="Types/Types.html">Types</a></h2>
+
+        <div class="footer">
+        <p align="center"><br>
+</p>
+        </div>
+    
+</div>
+<div id="footer">
+    <p class="hdr1">      <span class="Credits">Copyright &copy; 2019 - GRAPHISOFT SE. All rights reserved worldwide. <br />Modified on September 6, 2019<br/>
+      </span>
+    </p>
+    <p id="toplink"><a href="#docBegin"><img src="StyleLibrary/Images/top.gif" alt="top" width="31" height="14" id="toTopImg" /></a></p>
+</div>
+</body>
+</html>

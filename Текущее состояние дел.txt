@@ -1,0 +1,17 @@
+Разобрал рабботу скриптов:
+ApplyFavoriteToWalls
+ChangeInfoStringOfSelection
+
+Комментарии к скриптам написаны в:
+ApplyFavoriteToWalls
+
+Простой перевод функций сделан для:
+ApplyFavorite
+ChangeInfoString
+GetElementHeader
+GetElementList
+GetElementTypeName
+GetFavorites
+GetSelectedElements
+
+Расширенный перевод функций с полезными дополнениями:
