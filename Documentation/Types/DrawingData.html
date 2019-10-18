@@ -1,0 +1,133 @@
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="Author" content="###_author_###">
+        <title>DrawingData</title>
+    
+    <meta http-equiv="Content-Language" content="en-US">
+    <link rel="stylesheet" type="text/css" href="../StyleLibrary/Style.css">
+    <meta name="Microsoft.Help.F1" content="Types/DrawingData.html">
+    <xml>
+      <MSHelp:Attr Name = "DocSet" Value = "GRAPHISOFT"/>
+    </xml>
+</head>
+<body>
+<div id="docBegin">
+  <p id="graphisoft_title">&nbsp;<span>GRAPHISOFT&reg;</span></p>
+  <p class="hdr"><span class="TitleMain">Python&nbsp;API</span><span class="TitleVersion">Version: 0.23 Beta</span></p>
+</div>
+<div id="content" class="inset">
+
+        <h1>DrawingData</h1>
+        <p>
+            Represents the contents of a Drawing element.
+        </p>
+        <pre><code class="python"><strong>class</strong> DrawingData</code></pre>
+
+        <p>&nbsp;</p>
+        <h4>Members</h4>
+        <p>
+            The structure does not have any visible members.
+        </p>
+
+        <p>&nbsp;</p>
+        <h4>Methods</h4>
+        <dl>
+            <dd>
+                <a href="../Functions/DrawingData.GetBounds.html">GetBounds</a>:
+                Returns the calculated boundaries of the Drawing.
+            </dd>
+            <dd>
+                <a href="../Functions/DrawingData.StartDrawing.html">StartDrawing</a>:
+                Enters Drawing mode, redirecting Element creation to the contained handle.
+            </dd>
+            <dd>
+                <a href="../Functions/DrawingData.StopDrawing.html">StopDrawing</a>:
+                Exits Drawing mode, preparing the boundaries and handle of the Drawing data.
+            </dd>
+        </dl>
+
+        <p>&nbsp;</p>
+        <h4>Remarks</h4>
+        <p>
+            A DrawingData instance is uninitialized by default. The GetBounds and
+            GetHandle methods are only usable on initialized DrawingData instances.
+            The string representation of a DrawingData instance displays its status.
+        </p>
+        <p>
+            To initialize a DrawingData instance, one must enter Drawing mode, add
+            elements to the data handle by using the Element Creation functions, and
+            then exit it.
+        </p>
+
+        <p>&nbsp;</p>
+        <h4>Example</h4>
+
+        <blockquote>
+            <pre><code class="python">def DrawCircle (x, y, r):
+    element = APIObject ()
+    element.head = APIObject ()
+    element.head.typeID = API_ArcID
+    element.whole = True
+    element.origC = APIObject ()
+    element.origC.x = x
+    element.origC.y = y
+    element.r = r
+    return CreateArc (element)
+
+def MakeDrawing (scale):
+    element = APIObject ()
+    element.head = APIObject ()
+    element.head.typeID = API_DrawingID
+    element.head.hasMemo = True
+    memo = APIObject ()
+    drawingData = DrawingData ()
+    drawingData.StartDrawing (scale)
+    with UndoScope ("Create Drawing Elements"):
+        DrawCircle (0, 0, 1)
+        DrawCircle (0, 0, 2)
+        DrawCircle (0, 0, 3)
+        DrawCircle (0, 0, 4)
+        DrawCircle (0, 0, 5)
+    drawingData.StopDrawing ()
+    memo.drawingData = drawingData
+    element.bounds = drawingData.GetBounds ()
+    element.bounds.xMin -= 1
+    element.bounds.yMin -= 1
+    element.bounds.xMax += 1
+    element.bounds.yMax += 1
+    element.nameType = APIName_CustomName
+    element.name = "Test Drawing"
+    return CreateDrawing (element, memo)
+
+MakeDrawing (100)</code></pre>
+        </blockquote>
+
+        <p>&nbsp;</p>
+        <h4>Requirements</h4>
+        <dl>
+            <dd><b>Version:</b> Python API 0.1 or Later</dd>
+            <dd><b>Module:</b> GS</dd>
+        </dl>
+
+        <p>&nbsp;</p>
+        <h4>See Also</h4>
+        <p>
+            <a href="Types.html">All types</a>
+        </p>
+
+        <div class="footer">
+        <p align="center"><br>Created on September 11, 2018</p>
+        </div>
+    
+</div>
+<div id="footer">
+    <p class="hdr1">      <span class="Credits">Copyright &copy; 2019 - GRAPHISOFT SE. All rights reserved worldwide. <br />Modified on September 06, 2019<br/>
+      </span>
+    </p>
+    <p id="toplink"><a href="#docBegin"><img src="../StyleLibrary/Images/top.gif" alt="top" width="31" height="14" id="toTopImg" /></a></p>
+</div>
+</body>
+</html>

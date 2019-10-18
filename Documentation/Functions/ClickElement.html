@@ -1,0 +1,95 @@
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="Author" content="###_author_###">
+        <title>ClickElement</title>
+    
+    <meta http-equiv="Content-Language" content="en-US">
+    <link rel="stylesheet" type="text/css" href="../StyleLibrary/Style.css">
+    <meta name="Microsoft.Help.F1" content="Functions/ClickElement.html">
+    <xml>
+      <MSHelp:Attr Name = "DocSet" Value = "GRAPHISOFT"/>
+    </xml>
+</head>
+<body>
+<div id="docBegin">
+  <p id="graphisoft_title">&nbsp;<span>GRAPHISOFT&reg;</span></p>
+  <p class="hdr"><span class="TitleMain">Python&nbsp;API</span><span class="TitleVersion">Version: 0.23 Beta</span></p>
+</div>
+<div id="content" class="inset">
+
+        <h1>ClickElement</h1>
+        <p>
+            Ask the user to click an element.
+        </p>
+        <pre><code class="python"><strong>def</strong> ClickElement () -> <strong>String</strong></code></pre>
+
+        <p>&nbsp;</p>
+        <h4>Parameters</h4>
+        <dl>
+            <dt><em></em></dt>
+            <dd></dd>
+        </dl>
+
+        <p>&nbsp;</p>
+        <h4>Return Values</h4>
+        <p>This function returns the GUID of the clicked element.</p>
+
+        <p>&nbsp;</p>
+        <h4>Remarks</h4>
+        <p>
+            This function is analogous to the <a href="http://archicadapi.graphisoft.com/documentation/APIIo_GetPointID">APIIo_GetPointID</a> function of
+            the C++ API.
+        </p>
+
+        <p>&nbsp;</p>
+        <h4>Example</h4>
+
+        <blockquote>
+            <pre><code class="python"># Set clicked element's properties to default
+elem = ClickElement ()
+
+with UndoScope ("Set Element Properties to Default"):
+    for d in GetElementPropertyDefinitionDictionary (elem, API_PropertyDefinitionFilter_UserDefined).values ():
+        if d.canValueBeEditable and d.defaultValue.hasExpression == False:
+            p = GetElementProperty (elem, d.guid)
+            if p.isDefault == False:
+                p.isDefault = True
+                SetElementProperty (elem, p)
+                print("Changed \"{}\" property to it's default value.".format (d.name))</code></pre>
+        </blockquote>
+
+        <p>&nbsp;</p>
+        <h4>Requirements</h4>
+        <dl>
+            <dd><b>Version:</b> Python API 0.1 or Later</dd>
+            <dd><b>Module:</b> GS</dd>
+        </dl>
+
+        <p>&nbsp;</p>
+        <h4>See Also</h4>
+        <p>
+            <a href="GetElementList.html">GetElementList</a>,
+            <a href="GetElementHeader.html">GetElementHeader</a></br>
+            <a href="ClickPoint.html">ClickPoint</a>,
+            <a href="ClickPoly.html">ClickPoly</a>
+        </p>
+        <p>
+            <a href="Functions.html">All functions</a>
+        </p>
+
+        <div class="footer">
+        <p align="center"><br>Created on September 10, 2018</p>
+        </div>
+    
+</div>
+<div id="footer">
+    <p class="hdr1">      <span class="Credits">Copyright &copy; 2019 - GRAPHISOFT SE. All rights reserved worldwide. <br />Modified on September 06, 2019<br/>
+      </span>
+    </p>
+    <p id="toplink"><a href="#docBegin"><img src="../StyleLibrary/Images/top.gif" alt="top" width="31" height="14" id="toTopImg" /></a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="Author" content="###_author_###">
+        <title>ChangeElementHeader</title>
+    
+    <meta http-equiv="Content-Language" content="en-US">
+    <link rel="stylesheet" type="text/css" href="../StyleLibrary/Style.css">
+    <meta name="Microsoft.Help.F1" content="Functions/ChangeElementHeader.html">
+    <xml>
+      <MSHelp:Attr Name = "DocSet" Value = "GRAPHISOFT"/>
+    </xml>
+</head>
+<body>
+<div id="docBegin">
+  <p id="graphisoft_title">&nbsp;<span>GRAPHISOFT&reg;</span></p>
+  <p class="hdr"><span class="TitleMain">Python&nbsp;API</span><span class="TitleVersion">Version: 0.23 Beta</span></p>
+</div>
+<div id="content" class="inset">
+
+        <h1>ChangeElementHeader</h1>
+        <p>
+            Changes the header of an element, which contains the main informations of the element (layer, floor index, renovation info etc.).
+        </p>
+        <pre><code class="python"><strong>def</strong> ChangeElementHeader (elemHead) -> <strong>String</strong></code></pre>
+
+        <p>&nbsp;</p>
+        <h4>Parameters</h4>
+        <dl>
+            <dt><em>elemHead</em></dt>
+            <dd>[in] An APIObject describing the modified element informations. It's identified by GUID.</dd>
+        </dl>
+
+        <p>&nbsp;</p>
+        <h4>Return Values</h4>
+        <p>This function returns the GUID of the modified element.</p>
+
+        <p>&nbsp;</p>
+        <h4>Remarks</h4>
+        <p>
+            For information on how to fill the passed <code>elemHead</code> APIObject, visit the
+            documentation of <a href="http://archicadapi.graphisoft.com/documentation/api_elem_head">API_Elem_Head</a> structure.
+        </p>
+
+        <p>&nbsp;</p>
+        <h4>Example</h4>
+
+        <blockquote>
+            <pre><code class="python"># Move all morphs to the "Morph - General" layer
+morphLayer = SearchAttributeByName(API_LayerID, "Morph - General")
+count = 0
+
+with UndoScope("Changing Layer of Morphs"):
+    for morphGuid in GetElementList(API_MorphID):
+        morphHeader = GetElementHeader(morphGuid)
+        if morphHeader.layer != morphLayer.index:
+            morphHeader.layer = morphLayer.index
+            ChangeElementHeader(morphHeader)
+            count += 1
+
+print("Changed {} Morph(s)".format (count))</code></pre>
+        </blockquote>
+
+        <p>&nbsp;</p>
+        <h4>Requirements</h4>
+        <dl>
+            <dd><b>Version:</b> Python API 0.1 or Later</dd>
+            <dd><b>Module:</b> GS</dd>
+        </dl>
+
+        <p>&nbsp;</p>
+        <h4>See Also</h4>
+        <p>
+            <a href="GetElementHeader.html">GetElementHeader</a>,
+            <a href="GetElementList.html">GetElementList</a>
+        </p>
+        <p>
+            <a href="Functions.html">All functions</a>
+        </p>
+
+        <div class="footer">
+        <p align="center"><br>Created on September 10, 2018</p>
+        </div>
+    
+</div>
+<div id="footer">
+    <p class="hdr1">      <span class="Credits">Copyright &copy; 2019 - GRAPHISOFT SE. All rights reserved worldwide. <br />Modified on September 06, 2019<br/>
+      </span>
+    </p>
+    <p id="toplink"><a href="#docBegin"><img src="../StyleLibrary/Images/top.gif" alt="top" width="31" height="14" id="toTopImg" /></a></p>
+</div>
+</body>
+</html>

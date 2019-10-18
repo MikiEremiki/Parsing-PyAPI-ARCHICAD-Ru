@@ -1,0 +1,91 @@
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="Author" content="###_author_###">
+        <title>GetPropertyDefinitionDictionary</title>
+    
+    <meta http-equiv="Content-Language" content="en-US">
+    <link rel="stylesheet" type="text/css" href="../StyleLibrary/Style.css">
+    <meta name="Microsoft.Help.F1" content="Functions/GetPropertyDefinitionDictionary.html">
+    <xml>
+      <MSHelp:Attr Name = "DocSet" Value = "GRAPHISOFT"/>
+    </xml>
+</head>
+<body>
+<div id="docBegin">
+  <p id="graphisoft_title">&nbsp;<span>GRAPHISOFT&reg;</span></p>
+  <p class="hdr"><span class="TitleMain">Python&nbsp;API</span><span class="TitleVersion">Version: 0.23 Beta</span></p>
+</div>
+<div id="content" class="inset">
+
+        <h1>GetPropertyDefinitionDictionary</h1>
+        <p>
+            Lists the Property Definitions in a dictionary..
+        </p>
+        <pre><code class="python"><strong>def</strong> GetPropertyDefinitionDictionary (groupGUID) -> <strong>Dict (String, APIObject)</strong></code></pre>
+
+        <p>&nbsp;</p>
+        <h4>Parameters</h4>
+        <dl>
+            <dt><em>groupGUID</em></dt>
+            <dd>[in] GUID of a Property Group.</dd>
+        </dl>
+
+        <p>&nbsp;</p>
+        <h4>Return Values</h4>
+        <p>A dictionary containing the available Property Definitions belong to the given Property Group. Keys of the items are the GUIDs of the property definitions.</p>
+
+        <p>&nbsp;</p>
+        <h4>Remarks</h4>
+        <p>
+            This function is analogous to the <a href="http://archicadapi.graphisoft.com/documentation/ACAPI_Property_GetPropertyDefinitions">ACAPI_Property_GetPropertyDefinitions</a> function of
+            the C++ API.
+        </p>
+        <p>
+            For information on how to interpret the returned APIObject dictionary values, visit the
+            <a href="http://archicadapi.graphisoft.com/documentation/API_PropertyDefinition">C++ documentation</a>.
+        </p>
+
+        <p>&nbsp;</p>
+        <h4>Example</h4>
+
+        <blockquote>
+            <pre><code class="python">for groupGuid in GetPropertyGroupDictionary().keys():
+    for definition in GetPropertyDefinitionDictionary(groupGuid).values():
+        print("{} {}".format (definition.name, definition.guid))</code></pre>
+        </blockquote>
+
+        <p>&nbsp;</p>
+        <h4>Requirements</h4>
+        <dl>
+            <dd><b>Version:</b> Python API 0.1 or Later</dd>
+            <dd><b>Module:</b> GS</dd>
+        </dl>
+
+        <p>&nbsp;</p>
+        <h4>See Also</h4>
+        <p>
+            <a href="GetPropertyGroupDictionary.html">GetPropertyGroupDictionary</a><br />
+            <a href="CreatePropertyDefinition.html">CreatePropertyDefinition</a>,
+            <a href="ChangePropertyDefinition.html">ChangePropertyDefinition</a>
+        </p>
+        <p>
+            <a href="Functions.html">All functions</a>
+        </p>
+
+        <div class="footer">
+        <p align="center"><br>
+</p>
+        </div>
+    
+</div>
+<div id="footer">
+    <p class="hdr1">      <span class="Credits">Copyright &copy; 2019 - GRAPHISOFT SE. All rights reserved worldwide. <br />Modified on December 30, 2018<br/>
+      </span>
+    </p>
+    <p id="toplink"><a href="#docBegin"><img src="../StyleLibrary/Images/top.gif" alt="top" width="31" height="14" id="toTopImg" /></a></p>
+</div>
+</body>
+</html>
