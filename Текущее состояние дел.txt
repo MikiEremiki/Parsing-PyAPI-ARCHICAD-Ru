@@ -1,10 +1,12 @@
 Разобрал работу скриптов:
 ApplyFavoriteToWalls
 ChangeInfoStringOfSelection
+ChangeLayerOfMorphs
 
 Комментарии к скриптам написаны в:
 ApplyFavoriteToWalls
 ChangeInfoStringOfSelection
+ChangeLayerOfMorphs
 
 Простой перевод функций сделан для:
 ApplyFavorite
@@ -14,6 +16,14 @@ GetElementList
 GetElementTypeName
 GetFavorites
 GetSelectedElements
+ChangeElementHeader
+SearchAttributeByName
+
+Ролики обзоры записаны для:
+#3 ChangeLayerOfMorphs
+
+Ролики разборы записаны для:
+#3 ChangeLayerOfMorphs
 
 Расширенный перевод функций с полезными дополнениями:
 ---
