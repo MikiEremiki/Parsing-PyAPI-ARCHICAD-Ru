@@ -22,7 +22,8 @@
 
         <h1>SearchAttributeByName</h1>
         <p>
-            Searches for an attribute by name.
+            Searches for an attribute by name.<br/>
+            Выполняет поиск атрибута по имени.
         </p>
         <pre><code class="python"><strong>def</strong> SearchAttributeByName (typeID, name) -> <strong>APIObject</strong></code></pre>
 
@@ -30,25 +31,36 @@
         <h4>Parameters</h4>
         <dl>
             <dt><em>typeID</em></dt>
-            <dd>[in] The type of the requested attribute. See <a href="http://archicadapi.graphisoft.com/documentation/API_AttrTypeID">API_AttrTypeID</a> for available attribute types.</dd>
+            <dd>[in] The type of the requested attribute. See <a href="http://archicadapi.graphisoft.com/documentation/API_AttrTypeID">API_AttrTypeID</a>
+                for available attribute types.<br/>
+                [in] Тип запрашиваемого атрибута. Смотрите раздел <a href="http://archicadapi.graphisoft.com/documentation/API_AttrTypeID">API_AttrTypeID</a>
+                для доступных типов атрибутов.
+            </dd>
 
             <dt><em>name</em></dt>
-            <dd>[in] The of the requested attribute.</dd>
+            <dd>[in] The of the requested attribute.<br/>
+                [in] Значение запрошенного атрибута.
+            </dd>
         </dl>
 
         <p>&nbsp;</p>
         <h4>Return Values</h4>
-        <p>This function returns an APIObject describing the Property value of the given Property Defition for the given Element.</p>
+        <p>This function returns an APIObject describing the Property value of the given Property Defition for the given Element.<br/>
+            Эта функция возвращает APIObject, описывающий значение свойства данного определения свойства для данного элемента.
+        </p>
 
         <p>&nbsp;</p>
         <h4>Remarks</h4>
         <p>
             This function is analogous to the <a href="http://archicadapi.graphisoft.com/documentation/ACAPI_Attribute_Search">ACAPI_Attribute_Search</a> function of
-            the C++ API.
+            the C++ API.<br/>
+            Эта функция аналогична <a href="http://archicadapi.graphisoft.com/documentation/ACAPI_Attribute_Search">ACAPI_Attribute_Search</a> из C++ API.
         </p>
         <p>
             For information on how to interpret the returned APIObject, visit the
-            <a href="http://archicadapi.graphisoft.com/documentation/API_Attr_Head">C++ documentation</a>.
+            <a href="http://archicadapi.graphisoft.com/documentation/API_Attr_Head">C++ documentation</a>.<br/>
+            Для получения информации о том, как интерпретировать возвращенный APIObject, посетите
+            раздел <a href="http://archicadapi.graphisoft.com/documentation/API_Attr_Head">C++ documentation</a>.
         </p>
 
         <p>&nbsp;</p>

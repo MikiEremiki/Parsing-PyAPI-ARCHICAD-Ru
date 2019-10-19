@@ -22,7 +22,8 @@
 
         <h1>ChangeElementHeader</h1>
         <p>
-            Changes the header of an element, which contains the main informations of the element (layer, floor index, renovation info etc.).
+            Changes the header of an element, which contains the main informations of the element (layer, floor index, renovation info etc.).<br/>
+            Изменяет "заголовок" элемента, который содержит основные сведения об элементе (слой, индекс этажа, информация о реконструкции и т. д.).
         </p>
         <pre><code class="python"><strong>def</strong> ChangeElementHeader (elemHead) -> <strong>String</strong></code></pre>
 
@@ -30,18 +31,24 @@
         <h4>Parameters</h4>
         <dl>
             <dt><em>elemHead</em></dt>
-            <dd>[in] An APIObject describing the modified element informations. It's identified by GUID.</dd>
+            <dd>[in] An APIObject describing the modified element informations. It's identified by GUID.<br/>
+            [in] APIObject, описывающий измененные сведения об элементах. Он идентифицирован по GUID.
+            </dd>
         </dl>
 
         <p>&nbsp;</p>
         <h4>Return Values</h4>
-        <p>This function returns the GUID of the modified element.</p>
+        <p>This function returns the GUID of the modified element.<br/>
+        Эта функция возвращает GUID измененного элемента.
+        </p>
 
         <p>&nbsp;</p>
         <h4>Remarks</h4>
         <p>
             For information on how to fill the passed <code>elemHead</code> APIObject, visit the
-            documentation of <a href="http://archicadapi.graphisoft.com/documentation/api_elem_head">API_Elem_Head</a> structure.
+            documentation of <a href="http://archicadapi.graphisoft.com/documentation/api_elem_head">API_Elem_Head</a> structure.<br/>
+            Для получения информации о том, как заполнить "переданный" <code>elemHead</code> APIObject, посетите раздел документации
+            структуры <a href="http://archicadapi.graphisoft.com/documentation/api_elem_head">API_Elem_Head</a>.
         </p>
 
         <p>&nbsp;</p>
