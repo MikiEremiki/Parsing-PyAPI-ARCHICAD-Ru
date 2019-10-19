@@ -1,14 +1,14 @@
-Разобрал работу скриптов:
+Р Р°Р·РѕР±СЂР°Р» СЂР°Р±РѕС‚Сѓ СЃРєСЂРёРїС‚РѕРІ:
 ApplyFavoriteToWalls
 ChangeInfoStringOfSelection
 ChangeLayerOfMorphs
 
-Комментарии к скриптам написаны в:
+РљРѕРјРјРµРЅС‚Р°СЂРёРё Рє СЃРєСЂРёРїС‚Р°Рј РЅР°РїРёСЃР°РЅС‹ РІ:
 ApplyFavoriteToWalls
 ChangeInfoStringOfSelection
 ChangeLayerOfMorphs
 
-Простой перевод функций сделан для:
+РџСЂРѕСЃС‚РѕР№ РїРµСЂРµРІРѕРґ С„СѓРЅРєС†РёР№ СЃРґРµР»Р°РЅ РґР»СЏ:
 ApplyFavorite
 ChangeInfoString
 GetElementHeader
@@ -19,15 +19,15 @@ GetSelectedElements
 ChangeElementHeader
 SearchAttributeByName
 
-Ролики обзоры записаны для:
+Р РѕР»РёРєРё РѕР±Р·РѕСЂС‹ Р·Р°РїРёСЃР°РЅС‹ РґР»СЏ:
 #3 ChangeLayerOfMorphs
 
-Ролики разборы записаны для:
+Р РѕР»РёРєРё СЂР°Р·Р±РѕСЂС‹ Р·Р°РїРёСЃР°РЅС‹ РґР»СЏ:
 #3 ChangeLayerOfMorphs
 
-Расширенный перевод функций с полезными дополнениями:
+Р Р°СЃС€РёСЂРµРЅРЅС‹Р№ РїРµСЂРµРІРѕРґ С„СѓРЅРєС†РёР№ СЃ РїРѕР»РµР·РЅС‹РјРё РґРѕРїРѕР»РЅРµРЅРёСЏРјРё:
 ---
 
-Простой первод типов сделан для:
+РџСЂРѕСЃС‚РѕР№ РїРµСЂРІРѕРґ С‚РёРїРѕРІ СЃРґРµР»Р°РЅ РґР»СЏ:
 APIObject
 UndoScope
