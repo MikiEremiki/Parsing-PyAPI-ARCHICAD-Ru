@@ -6,12 +6,14 @@ ApplyFavoriteToWalls
 ChangeInfoStringOfSelection
 ChangeLayerOfMorphs
 CheckInfoStringDuplicationForSelection
+CheckInfoStringFormatForSelection
 
 Комментарии к скриптам написаны в:
 ApplyFavoriteToWalls
 ChangeInfoStringOfSelection
 ChangeLayerOfMorphs
 CheckInfoStringDuplicationForSelection
+CheckInfoStringFormatForSelection
 
 Простой перевод функций сделан для:
 ApplyFavorite
@@ -28,10 +30,12 @@ GetInfoString
 Ролики обзоры записаны для:
 #3 ChangeLayerOfMorphs
 #4 CheckInfoStringDuplicationForSelection
+#5 CheckInfoStringFormatForSelection
 
 Ролики разборы записаны для:
 #3 ChangeLayerOfMorphs
 #4 CheckInfoStringDuplicationForSelection
+#5 CheckInfoStringFormatForSelection
 
 Расширенный перевод функций с полезными дополнениями:
 ---
