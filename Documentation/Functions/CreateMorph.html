@@ -22,7 +22,8 @@
 
         <h1>CreateMorph</h1>
         <p>
-            Creates an Morph element.
+            (en)Creates an Morph element.<br/>
+            (ru)Создает элемент Morph.
         </p>
         <pre><code class="python"><strong>def</strong> CreateMorph (element) -> <strong>String</strong></code></pre>
 
@@ -30,22 +31,29 @@
         <h4>Parameters</h4>
         <dl>
             <dt><em>element</em></dt>
-            <dd>[in] An APIObject describing the Morph element to create.</dd>
+            <dd>[in] (en)An APIObject describing the Morph element to create.<br/>
+                [in] (ru)APIObject, описывающий элемент Morph для создания.
+            </dd>
         </dl>
 
         <p>&nbsp;</p>
         <h4>Return Values</h4>
-        <p>This function returns the GUID of the created element.</p>
+        <p>(en)This function returns the GUID of the created element.<br/>
+            (ru)Эта функция возвращает идентификатор GUID созданного элемента.
+        </p>
 
         <p>&nbsp;</p>
         <h4>Remarks</h4>
         <p>
-            This function is analogous to the ACAPI_Element_Create function of
-            the C++ API for Morph elements. Undefined members will be set to the
-            current defaults.
+            (en)This function is analogous to the ACAPI_Element_Create function of
+            the C++ API for Morph elements. Undefined members will be set to the current defaults.<br/>
+            (ru)Эта функция аналогична функции ACAPI_Element_Create из C++ API для элементов Morph.
+            Неопределенные члены будут установлены на текущие значения по умолчанию.<br/>
         </p>
         <p>
-            For information on how to fill the passed APIObject, visit the
+            (en)For information on how to fill the passed APIObject, visit the
+            <a href="http://archicadapi.graphisoft.com/documentation/api_morphtype">C++ documentation</a>.<br/>
+            (ru)Для получения информации о том, как заполнить переданный APIObject, посетите раздел
             <a href="http://archicadapi.graphisoft.com/documentation/api_morphtype">C++ documentation</a>.
         </p>
 
