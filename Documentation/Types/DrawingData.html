@@ -22,44 +22,55 @@
 
         <h1>DrawingData</h1>
         <p>
-            Represents the contents of a Drawing element.
+            (en)Represents the contents of a Drawing element.<br/>
+            (ru)Представляет содержимое элемента чертежа.
         </p>
         <pre><code class="python"><strong>class</strong> DrawingData</code></pre>
 
         <p>&nbsp;</p>
         <h4>Members</h4>
         <p>
-            The structure does not have any visible members.
-        </p>
-
+            (en)The structure does not have any visible members.<br/>
+            (ru)Структура не имеет никаких видимых элементов.
         <p>&nbsp;</p>
         <h4>Methods</h4>
         <dl>
             <dd>
                 <a href="../Functions/DrawingData.GetBounds.html">GetBounds</a>:
-                Returns the calculated boundaries of the Drawing.
-            </dd>
+                (en)Returns the calculated boundaries of the Drawing.<br/>
+                <a href="../Functions/DrawingData.GetBounds.html">GetBounds</a>:
+                (ru)Возвращает вычисленные границы чертежа.
+            </dd><br/>
             <dd>
                 <a href="../Functions/DrawingData.StartDrawing.html">StartDrawing</a>:
-                Enters Drawing mode, redirecting Element creation to the contained handle.
-            </dd>
+                (en)Enters Drawing mode, redirecting Element creation to the contained handle.<br/>
+                <a href="../Functions/DrawingData.StartDrawing.html">StartDrawing</a>:
+                (ru)Переходит в режим рисования, перенаправляя создание элемента на содержащийся дескриптор.
+            </dd><br/>
             <dd>
                 <a href="../Functions/DrawingData.StopDrawing.html">StopDrawing</a>:
-                Exits Drawing mode, preparing the boundaries and handle of the Drawing data.
+                (en)Exits Drawing mode, preparing the boundaries and handle of the Drawing data.<br/>
+                <a href="../Functions/DrawingData.StopDrawing.html">StopDrawing</a>:
+                (ru)Завершает работу в режиме чертежа, подготавливая границы и дескриптор данных чертежа.
             </dd>
         </dl>
 
         <p>&nbsp;</p>
         <h4>Remarks</h4>
         <p>
-            A DrawingData instance is uninitialized by default. The GetBounds and
+            (en)A DrawingData instance is uninitialized by default. The GetBounds and
             GetHandle methods are only usable on initialized DrawingData instances.
-            The string representation of a DrawingData instance displays its status.
+            The string representation of a DrawingData instance displays its status.<br/>
+            (ru)Экземпляр DrawingData неинициализирован по умолчанию.
+            Методы GetBounds и GetHandle используются только для инициализированных экземпляров DrawingData.
+            Строковое представление экземпляра DrawingData отображает его состояние.
         </p>
         <p>
-            To initialize a DrawingData instance, one must enter Drawing mode, add
+            (en)To initialize a DrawingData instance, one must enter Drawing mode, add
             elements to the data handle by using the Element Creation functions, and
-            then exit it.
+            then exit it.<br/>
+            (ru)Для инициализации экземпляра DrawingData необходимо войти в режим рисования, добавить
+            элементы для обработки данных с помощью функций создания элементов, а затем выйти из него.
         </p>
 
         <p>&nbsp;</p>
