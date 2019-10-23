@@ -22,21 +22,26 @@
 
         <h1>StopDrawing</h1>
         <p>
-            Exits Drawing mode for a DrawingData structure, and initializes it.
+            (en)Exits Drawing mode for a DrawingData structure, and initializes it.<br/>
+            (ru)Завершает работу в режиме рисования для структуры DrawingData и инициализирует ее.
         </p>
         <pre><code class="python"><strong>def</strong> StopDrawing () -> <strong>None</strong></code></pre>
 
         <p>&nbsp;</p>
         <h4>Remarks</h4>
         <p>
-            Exiting Drawing mode results in the DrawingData being initialized, if
-            successful.
+            (en)Exiting Drawing mode results in the DrawingData being initialized, if
+            successful.<br/>
+            (ru)Выход из режима рисования приводит к инициализации DrawingData, если успешно.
         </p>
         <p>
-            Only one DrawingData can be in Drawing mode at one time, as this is a
+            (en)Only one DrawingData can be in Drawing mode at one time, as this is a
             global state. Subsequent calls to StopDrawing, or using StartDrawing and
             StopDrawing on two different instances of DrawingData results in
-            <strong>undefined behavior</strong>.
+            <strong>undefined behavior</strong>.<br/>
+            (ru)Только один DrawingData может быть в режиме рисования в одно время, так как это глобальное состояние.
+            Последующие вызовы для StopDrawing, или использование StartDrawing и StopDrawing на двух различных
+            экземплярах DrawingData приводит к <strong>неопределенному поведению</strong>.
         </p>
 
         <p>&nbsp;</p>

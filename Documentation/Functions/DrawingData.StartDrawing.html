@@ -22,22 +22,28 @@
 
         <h1>StartDrawing</h1>
         <p>
-            Enters Drawing mode for a DrawingData structure.
+            (en)Enters Drawing mode for a DrawingData structure.<br/>
+            (ru)Входит в режим рисования для структуры DrawingData.
         </p>
         <pre><code class="python"><strong>def</strong> StartDrawing () -> <strong>None</strong></code></pre>
 
         <p>&nbsp;</p>
         <h4>Remarks</h4>
         <p>
-            Entering Drawing mode makes each subsequent call to any Element creation
+            (en)Entering Drawing mode makes each subsequent call to any Element creation
             function to be redirected to the Drawing Data, which means no actual Element
-            creation.
+            creation.<br/>
+            (ru)При входе в режим рисования каждый последующий вызов любой функции создающей элемент,
+            будет перенаправлена в данные чертежа, что означает отсутствие фактического создания элемента.
         </p>
         <p>
-            Only one DrawingData can be in Drawing mode at one time, as this is a
+            (en)Only one DrawingData can be in Drawing mode at one time, as this is a
             global state. Subsequent calls to StartDrawing, or using StartDrawing and
             StopDrawing on two different instances of DrawingData results in
-            <strong>undefined behavior</strong>.
+            <strong>undefined behavior</strong>.<br/>
+            (ru)Только один DrawingData может быть в режиме рисования в одно время, так как это глобальное состояние.
+            Последующие вызовы для StartDrawing, или использование StartDrawing и StopDrawing на двух различных
+            экземплярах DrawingData приводит к <strong>неопределенному поведению</strong>.
         </p>
 
         <p>&nbsp;</p>
