@@ -33,6 +33,7 @@ ChangeArc
 ChangeDrawing
 DrawingData.StartDrawing
 DrawingData.StopDrawing
+DrawingData.GetBounds
 CreateDrawing
 CreateText
 DeleteElements
