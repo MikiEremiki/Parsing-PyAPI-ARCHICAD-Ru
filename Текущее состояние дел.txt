@@ -1,11 +1,11 @@
-Разобрался как заливать ролики в 1080p. Голоса нет, есть сложности, а вот комментарии легко добавляю.
-
 Разобрал работу скриптов:
 ApplyFavoriteToWalls
 ChangeInfoStringOfSelection
 ChangeLayerOfMorphs
 CheckInfoStringDuplicationForSelection
 CheckInfoStringFormatForSelection
+CreateMorphFromOBJFile
+DoElementTest
 
 Комментарии к скриптам написаны в:
 ApplyFavoriteToWalls
@@ -13,6 +13,8 @@ ChangeInfoStringOfSelection
 ChangeLayerOfMorphs
 CheckInfoStringDuplicationForSelection
 CheckInfoStringFormatForSelection
+CreateMorphFromOBJFile
+DoElementTest
 
 Простой перевод функций сделан для:
 ApplyFavorite
@@ -25,16 +27,31 @@ GetSelectedElements
 ChangeElementHeader
 SearchAttributeByName
 GetInfoString
+GetAttributeDictionary
+CreateMorph
+ChangeArc
+ChangeDrawing
+DrawingData.StartDrawing
+DrawingData.StopDrawing
+DrawingData.GetBounds
+CreateDrawing
+CreateText
+DeleteElements
+GetDrawing
+Alert
 
 Ролики обзоры записаны для:
 #3 ChangeLayerOfMorphs
 #4 CheckInfoStringDuplicationForSelection
 #5 CheckInfoStringFormatForSelection
+#6 CreateMorphFromOBJFile
+#7 DoElementTest
 
 Ролики разборы записаны для:
 #3 ChangeLayerOfMorphs
 #4 CheckInfoStringDuplicationForSelection
 #5 CheckInfoStringFormatForSelection
+#6 CreateMorphFromOBJFile
 
 Расширенный перевод функций с полезными дополнениями:
 ---
@@ -42,3 +59,4 @@ GetInfoString
 Простой первод типов сделан для:
 APIObject
 UndoScope
+DrawingData
