@@ -2,12 +2,23 @@
 
 
 def DrawCircle(x, y, r):  # Объявляем функцию "Создание окружности"
-    element = APIObject()  # Создаем "архикадовский объект" с присущими ему свойствами этого класса
-    element.head = APIObject()  # Делаем доступными все свойства "метода" head
-    element.head.typeID = API_ArcID  # Используя свойства head присваиваем тип элемента - тип дуга, соответсвенно теперь
-    # у element присутствуют свойства дуги
+    element = APIObject()
+    element.head = APIObject()
+    element.head.typeID = API_ArcID
+
+    # Сейчас спустя время, я уже переосмыслил, что APIObject() нужно присваивать ко всем элементам,
+    # к которым мы хотим получить нужные свойства. В частности мы не можем сразу обратится к свойству typeID и
+    # написать element.head.typeID поскольку он еще не создан,
+    # для этого используется цепочка связывания нескольких APIObject'ов.
+
     element.whole = True  # Объявляем что дуга должна быть цельной, то есть окружностью
     element.origC = APIObject()  # Еще делаем, возможным использование свойств центра точки окружности
+
+    # Соответсвенно не создаем объект, а получаем доступ к свойствам "подкласса/метода/подобъекта/атрибута"
+    # origC(так как я не видел как устроена модель ООП APIObject'а (если можно так выразится),
+    # то и не знаю чем именно является origC, whole, head и прочие.
+    # Если кто - то это понимает, напишите мне я бы добавил это в комментариях
+
     element.origC.x = x  # Делаем связываение какие значения должны брать координаты центра окружности
     element.origC.y = y
     element.r = r  # и значение радиуса
@@ -48,6 +59,7 @@ def MakeDrawing(scale):  # Повтрояем все тоже самое с фу
     memo = APIObject()
     drawingData = DrawingData()  # Создаем элемент обладающий свойствами чертежа
     drawingData.StartDrawing(scale)  # Все последующие строки пойдут внутрь чертежа
+    # очень важно чтобы одновременно выполнялся только один Start or Stop drawing
     with UndoScope("Create Drawing Elements"):
         DrawText(-0.45, 0.2, "Hello")
         DrawCircle(0, 0, 1)
@@ -55,6 +67,7 @@ def MakeDrawing(scale):  # Повтрояем все тоже самое с фу
         DrawCircle(0, 0, 3)
         DrawCircle(0, 0, 4)
         DrawCircle(0, 0, 5)
+        DrawText(1, 2, "Hello")
     drawingData.StopDrawing()  # Закончили наполнение чертежа 1 текстом и 5 окружностями
     memo.drawingData = drawingData  # мы создали изначально переменную drawingData,
     # заполнили ее чем то между строками start и stop, теперь ее нужно передать в функцию CreateDrawing,
@@ -73,13 +86,14 @@ def MakeDrawing(scale):  # Повтрояем все тоже самое с фу
 
 def ChangeDrawingTest(guid):  # Функция изменения чертежа
     element = GetDrawing(guid)  # Получаем свойства от указанного чертежа по GUID
-    element = element[0]  # Из чертежа нам нужны свойства только первого элемента, а это был текст.
-    # Не самый очевидный способ конечно, до конца так и не ясно почему только первый элемент подвергается влиянию
+    element = element[0]  # element при получении данных от чертежа содержит кортеж (сам чертеж и еще какие-то данные),
+    # потом из кортежа берем первый элемент, это непосредственно чертеж и меняем его как нам нужно
     element.hasBorderLine = True  # Говорим что чертеж имеет линию границы
     element.borderLineType = 1  # Ее тип
     element.borderPen += 2  # Выбираем номер пера на 2 больше от того, что было
-    element.borderSize *= 1.5  # Размер границы увеличиваем в 1.5 раза
-    element.angle = 3.141592654 / 12  # 15 Degrees  Делаем поворот
+    element.borderSize *= 1.5  # Размер границы увеличиваем в 1.5 раза * 5 = 7.5 мм (я не понял почему так)
+    element.angle = 3.141592654 / 12  # 15 Degrees  Делаем поворот, элементов внутри чертежа,
+    # вокруг своих локальных точек поворота
     element.colorMode = APIColorMode_GrayScale  # Изменяем цветовой режим
     return ChangeDrawing(element)  # Изменяем элемент в чертеже
 
@@ -92,7 +106,8 @@ elements.append(DrawWall(0, 0, 10, 0))
 elements.append(DrawWall(10, 0, 10, 10))
 elements.append(DrawText(5, 5, "Hello, world!"))
 Alert("{} Elements Made".format(len(elements)))  # Функция для вывода предупреждений
-DeleteElements(elements)  # Функция для удаления всех элементов созданных ранее
+DeleteElements(elements)  # Функция для удаления всех элементов созданных ранее,
+# также возвращает число удаленных элементов
 elements.append(MakeDrawing(100))  # Содаем чертеж
 Alert("Drawing Made".format(len(elements)))
 ChangeDrawingTest(elements[-1])  # Изменяем этот чертеж
