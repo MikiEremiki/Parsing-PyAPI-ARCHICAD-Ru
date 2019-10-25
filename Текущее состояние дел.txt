@@ -1,64 +1,53 @@
-Разобрал работу скриптов:
+Разобрал работу скриптов и написал комментарии:
 ApplyFavoriteToWalls
 ChangeInfoStringOfSelection
 ChangeLayerOfMorphs
 CheckInfoStringDuplicationForSelection
 CheckInfoStringFormatForSelection
 CreateMorphFromOBJFile
-DoElementTest
+DoElementTest - значимый
 DoIOTest
+DrawChessBoard - значимый
 
-Комментарии к скриптам написаны в:
-ApplyFavoriteToWalls
-ChangeInfoStringOfSelection
-ChangeLayerOfMorphs
-CheckInfoStringDuplicationForSelection
-CheckInfoStringFormatForSelection
-CreateMorphFromOBJFile
-DoElementTest
-DoIOTest
+Ролики обзоры и разборы записаны для:
+#3 ChangeLayerOfMorphs
+#4 CheckInfoStringDuplicationForSelection
+#5 CheckInfoStringFormatForSelection
+#6 CreateMorphFromOBJFile
+#7 DoElementTest
+#8 DoIOTest
+#9 DrawChessBoard
 
 Простой перевод функций сделан для:
 ApplyFavorite
 ChangeInfoString
-GetElementHeader
-GetElementList
-GetElementTypeName
-GetFavorites
-GetSelectedElements
+CreateDrawing
+CreateText
 ChangeElementHeader
-SearchAttributeByName
-GetInfoString
-GetAttributeDictionary
 CreateMorph
 ChangeArc
 ChangeDrawing
 DrawingData.StartDrawing
 DrawingData.StopDrawing
 DrawingData.GetBounds
-CreateDrawing
-CreateText
 DeleteElements
+GetElementHeader
+GetElementList
+GetElementTypeName
+GetFavorites
+GetSelectedElements
 GetDrawing
+GetMorph
+GetInfoString
+GetAttributeDictionary
+SearchAttributeByName
+
 Alert
 PrintError
 PrintWarning
+CreateWall
+CreateArc
 
-Ролики обзоры записаны для:
-#3 ChangeLayerOfMorphs
-#4 CheckInfoStringDuplicationForSelection
-#5 CheckInfoStringFormatForSelection
-#6 CreateMorphFromOBJFile
-#7 DoElementTest
-#8 DoIOTest
-
-Ролики разборы записаны для:
-#3 ChangeLayerOfMorphs
-#4 CheckInfoStringDuplicationForSelection
-#5 CheckInfoStringFormatForSelection
-#6 CreateMorphFromOBJFile
-#7 DoElementTest
-#8 DoIOTest
 
 Расширенный перевод функций с полезными дополнениями:
 ---
@@ -67,3 +56,5 @@ PrintWarning
 APIObject
 UndoScope
 DrawingData
+ModelerBody
+Types
