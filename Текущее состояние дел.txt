@@ -9,6 +9,7 @@ DoElementTest - значимый
 DoIOTest
 DrawChessBoard - значимый
 DrawLayoutBookTree
+ExportPropertiesToExcelForClickedElement - значимый
 
 Ролики обзоры и разборы записаны для:
 #3 ChangeLayerOfMorphs
@@ -19,6 +20,7 @@ DrawLayoutBookTree
 #8 DoIOTest
 #9 DrawChessBoard
 #10 DrawLayoutBookTree
+#11 ExportPropertiesToExcelForClickedElement
 
 Простой перевод функций сделан для:
 Alert
@@ -32,6 +34,7 @@ CreateText
 CreateWall
 CreateArc
 CreateMorph
+ClickElement
 DrawingData.StartDrawing
 DrawingData.StopDrawing
 DrawingData.GetBounds
@@ -46,6 +49,8 @@ GetMorph
 GetInfoString
 GetAttributeDictionary
 GetNavigatorTree
+GetElementPropertyDefinitionDictionary
+GetElementProperty
 SearchAttributeByName
 PrintError
 PrintWarning
