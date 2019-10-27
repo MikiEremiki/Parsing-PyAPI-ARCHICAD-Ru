@@ -45,6 +45,7 @@ GetDrawing
 GetMorph
 GetInfoString
 GetAttributeDictionary
+GetNavigatorTree
 SearchAttributeByName
 PrintError
 PrintWarning
