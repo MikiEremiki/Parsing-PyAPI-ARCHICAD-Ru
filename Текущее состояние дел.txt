@@ -8,6 +8,7 @@ CreateMorphFromOBJFile
 DoElementTest - значимый
 DoIOTest
 DrawChessBoard - значимый
+DrawLayoutBookTree
 
 Ролики обзоры и разборы записаны для:
 #3 ChangeLayerOfMorphs
@@ -17,16 +18,20 @@ DrawChessBoard - значимый
 #7 DoElementTest
 #8 DoIOTest
 #9 DrawChessBoard
+#10 DrawLayoutBookTree
 
 Простой перевод функций сделан для:
+Alert
 ApplyFavorite
 ChangeInfoString
-CreateDrawing
-CreateText
-ChangeElementHeader
-CreateMorph
 ChangeArc
 ChangeDrawing
+ChangeElementHeader
+CreateDrawing
+CreateText
+CreateWall
+CreateArc
+CreateMorph
 DrawingData.StartDrawing
 DrawingData.StopDrawing
 DrawingData.GetBounds
@@ -41,13 +46,8 @@ GetMorph
 GetInfoString
 GetAttributeDictionary
 SearchAttributeByName
-
-Alert
 PrintError
 PrintWarning
-CreateWall
-CreateArc
-
 
 Расширенный перевод функций с полезными дополнениями:
 ---
