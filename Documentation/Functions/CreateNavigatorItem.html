@@ -22,7 +22,8 @@
 
         <h1>CreateNavigatorItem</h1>
         <p>
-            Creates new navigator item with the given data under the given parent.
+            (en)Creates new navigator item with the given data under the given parent.<br/>
+            (ru)Создает новый элемент навигатора с заданными данными под заданным родительским элементом.
         </p>
         <pre><code class="python"><strong>def</strong> CreateNavigatorItem (item, parentItem, itemBefore) -> <strong>String</strong></code></pre>
 
@@ -30,31 +31,42 @@
         <h4>Parameters</h4>
         <dl>
             <dt><em>item</em></dt>
-            <dd>[in-out] An APIObject describing the data of the new navigator item. The identifier fields will be filled by this function.</dd>
+            <dd>[in-out] (en)An APIObject describing the data of the new navigator item. The identifier fields will be filled by this function.<br/>
+                [in-out] (ru)APIObject, описывающий данные нового элемента навигатора. Поля идентификаторов будут заполнены этой функцией.
+            </dd>
 
             <dt><em>parentItem</em></dt>
-            <dd>[in] An existing navigator item which will be the parent of the new item (e.g. subset in case of layout items).</dd>
+            <dd>[in] (en)An existing navigator item which will be the parent of the new item (e.g. subset in case of layout items).<br/>
+                [in] (ru)Существующий элемент навигатора, который будет родительским для нового элемента (например, подмножество в случае элементов компоновки).
+            </dd>
 
             <dt><em>itemBefore</em></dt>
-            <dd>[in] (optional) An existing navigator item to define the position of the new item.</dd>
+            <dd>[in] (en)(optional) An existing navigator item to define the position of the new item.<br/>
+                [in] (ru)(необязательно) существующий элемент навигатора для определения положения нового элемента.
+            </dd>
         </dl>
 
         <p>&nbsp;</p>
         <h4>Return Values</h4>
-        <p>This function returns the GUID of the new navigator item.</p>
+        <p>(en)This function returns the GUID of the new navigator item.<br/>
+            (ru)Эта функция возвращает идентификатор GUID нового элемента навигатора.
+        </p>
 
         <p>&nbsp;</p>
         <h4>Remarks</h4>
         <p>
-            For information on how to fill the passed <code>item</code> APIObject, visit the
-            documentation of <a href="http://archicadapi.graphisoft.com/documentation/API_NavigatorItem">API_NavigatorItem</a> structure.
+            (en)For information on how to fill the passed <code>item</code> APIObject, visit the
+            documentation of <a href="http://archicadapi.graphisoft.com/documentation/API_NavigatorItem">API_NavigatorItem</a> structure.<br/>
+            (ru)Для получения информации о том, как заполнить переданный itemAPIObject, посетите раздел документации структуры
+            <a href="http://archicadapi.graphisoft.com/documentation/API_NavigatorItem">API_NavigatorItem</a>.
         </p>
 
         <p>&nbsp;</p>
         <h4>Example</h4>
 
         <p>
-            See GenerateLayoutBookFromTXT.py example script.
+            (en)See GenerateLayoutBookFromTXT.py example script.
+            (ru)Смотрите GenerateLayoutBookFromTXT.py пример сценария.
         </p>
 
         <p>&nbsp;</p>
