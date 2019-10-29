@@ -10,6 +10,7 @@ DoIOTest
 DrawChessBoard - значимый
 DrawLayoutBookTree
 ExportPropertiesToExcelForClickedElement - значимый
+GenerateLayoutBookFromExcel - значимый
 
 Ролики обзоры и разборы записаны для:
 #3 ChangeLayerOfMorphs
@@ -21,6 +22,7 @@ ExportPropertiesToExcelForClickedElement - значимый
 #9 DrawChessBoard
 #10 DrawLayoutBookTree
 #11 ExportPropertiesToExcelForClickedElement
+#12 GenerateLayoutBookFromExcel
 
 Простой перевод функций сделан для:
 Alert
@@ -29,11 +31,13 @@ ChangeInfoString
 ChangeArc
 ChangeDrawing
 ChangeElementHeader
+ChangeNavigatorItem
 CreateDrawing
 CreateText
 CreateWall
 CreateArc
 CreateMorph
+CreateNavigatorItem
 ClickElement
 DrawingData.StartDrawing
 DrawingData.StopDrawing
