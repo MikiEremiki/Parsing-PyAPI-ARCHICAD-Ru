@@ -1,0 +1,13 @@
+Subset Floor Plans, Parent: -
+Subset Elevations, Parent: -
+
+Header, Master: Обложка, Parent: - 
+
+First, Master: Обложка, Parent: Floor Plans
+Second, Master: Обложка, Parent: Floor Plans
+Third, Master: Обложка, Parent: Floor Plans
+
+North, Master: Обложка, Parent: Elevations
+East, Master: Обложка, Parent: Elevations
+West, Master: Обложка, Parent: Elevations
+South, Master: Обложка, Parent: Elevations
