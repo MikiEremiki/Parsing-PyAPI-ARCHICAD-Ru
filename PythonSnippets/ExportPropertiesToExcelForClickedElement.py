@@ -9,7 +9,7 @@ outputFile = os.path.join(scriptDir, "Test.xlsx")  # Добавляем к пу�
 def ExportPropertiesToExcel(elemGuid, fileName):  # Объявляем функцию, которая экспортирует свойства в Эксель
     workbook = xlsxwriter.Workbook(fileName)  # Создаем excel файл
     worksheet = workbook.add_worksheet("Properties")  # Добавляем лист
-    definitionDictionary = GetElementPropertyDefinitionDictionary(elemGuid, API_PropertyDefinitionFilter_All)
+    definitionDictionary = GetElementPropertyDefinitionDictionary(elemGuid, API_​GetParamValuesType)  # API_PropertyDefinitionFilter_All
     # получаем все свойства элемента по GUID и с указанным фильтром
 
     headlineFormat = {'bold': True, 'bottom': True, 'align': 'center'}  # Создает форматирование первой строки
