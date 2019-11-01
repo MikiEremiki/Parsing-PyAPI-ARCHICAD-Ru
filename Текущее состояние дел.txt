@@ -11,6 +11,8 @@ DrawChessBoard - значимый
 DrawLayoutBookTree
 ExportPropertiesToExcelForClickedElement - значимый
 GenerateLayoutBookFromExcel - значимый
+GenerateLayoutBookFromTXT
+GetNumberOfGroups
 
 Ролики обзоры и разборы записаны для:
 #3 ChangeLayerOfMorphs
@@ -23,6 +25,8 @@ GenerateLayoutBookFromExcel - значимый
 #10 DrawLayoutBookTree
 #11 ExportPropertiesToExcelForClickedElement
 #12 GenerateLayoutBookFromExcel
+#13 GenerateLayoutBookFromTXT
+#14 GetNumberOfGroups
 
 Простой перевод функций сделан для:
 Alert
@@ -43,9 +47,6 @@ DrawingData.StartDrawing
 DrawingData.StopDrawing
 DrawingData.GetBounds
 DeleteElements
-GetElementHeader
-GetElementList
-GetElementTypeName
 GetFavorites
 GetSelectedElements
 GetDrawing
@@ -53,8 +54,16 @@ GetMorph
 GetInfoString
 GetAttributeDictionary
 GetNavigatorTree
+GetNavigatorItem
 GetElementPropertyDefinitionDictionary
 GetElementProperty
+GetElementHeader
+GetElementList
+GetElementType
+GetElementTypeName
+GetGroupedElements
+GetGroupOfElement
+GetPropertyDefinitionDictionary
 SearchAttributeByName
 PrintError
 PrintWarning
