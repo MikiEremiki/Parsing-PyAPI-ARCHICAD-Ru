@@ -13,6 +13,7 @@ ExportPropertiesToExcelForClickedElement - значимый
 GenerateLayoutBookFromExcel - значимый
 GenerateLayoutBookFromTXT
 GetNumberOfGroups
+GroupSimilarMorphs
 
 Ролики обзоры и разборы записаны для:
 #3 ChangeLayerOfMorphs
@@ -27,6 +28,7 @@ GetNumberOfGroups
 #12 GenerateLayoutBookFromExcel
 #13 GenerateLayoutBookFromTXT
 #14 GetNumberOfGroups
+#15 GroupSimilarMorphs
 
 Простой перевод функций сделан для:
 Alert
@@ -42,6 +44,7 @@ CreateWall
 CreateArc
 CreateMorph
 CreateNavigatorItem
+CreateElementGroup
 ClickElement
 DrawingData.StartDrawing
 DrawingData.StopDrawing
