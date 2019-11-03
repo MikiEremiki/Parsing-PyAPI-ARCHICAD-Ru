@@ -17,6 +17,7 @@ GroupSimilarMorphs
 ListClickedElementMembers
 PlaceViewsToLayoutsFromExcel
 PrintElementStatistics
+PublishSet
 
 Ролики обзоры и разборы записаны для:
 #3 ChangeLayerOfMorphs
@@ -35,6 +36,7 @@ PrintElementStatistics
 #16 ListClickedElementMembers
 #17 PlaceViewsToLayoutsFromExcel
 #18 PrintElementStatistics
+#19 PublishSet
 
 Простой перевод функций сделан для:
 Alert
@@ -78,6 +80,8 @@ GetLayoutSettings
 SearchAttributeByName
 PrintError
 PrintWarning
+PublishSet
+Open
 
 Расширенный перевод функций с полезными дополнениями:
 ---
