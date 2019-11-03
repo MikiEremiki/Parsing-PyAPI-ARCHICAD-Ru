@@ -18,6 +18,7 @@ ListClickedElementMembers
 PlaceViewsToLayoutsFromExcel
 PrintElementStatistics
 PublishSet
+SetPropertiesToDefaultForClickedElement
 
 Ролики обзоры и разборы записаны для:
 #3 ChangeLayerOfMorphs
@@ -37,6 +38,7 @@ PublishSet
 #17 PlaceViewsToLayoutsFromExcel
 #18 PrintElementStatistics
 #19 PublishSet
+#20 SetPropertiesToDefaultForClickedElement
 
 Простой перевод функций сделан для:
 Alert
@@ -78,6 +80,7 @@ GetGroupOfElement
 GetPropertyDefinitionDictionary
 GetLayoutSettings
 SearchAttributeByName
+SetElementProperty
 PrintError
 PrintWarning
 PublishSet
