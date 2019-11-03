@@ -15,6 +15,7 @@ GenerateLayoutBookFromTXT
 GetNumberOfGroups
 GroupSimilarMorphs
 ListClickedElementMembers
+PlaceViewsToLayoutsFromExcel
 
 Ролики обзоры и разборы записаны для:
 #3 ChangeLayerOfMorphs
@@ -31,6 +32,7 @@ ListClickedElementMembers
 #14 GetNumberOfGroups
 #15 GroupSimilarMorphs
 #16 ListClickedElementMembers
+#17 PlaceViewsToLayoutsFromExcel
 
 Простой перевод функций сделан для:
 Alert
@@ -70,6 +72,7 @@ GetElementTypeName
 GetGroupedElements
 GetGroupOfElement
 GetPropertyDefinitionDictionary
+GetLayoutSettings
 SearchAttributeByName
 PrintError
 PrintWarning
