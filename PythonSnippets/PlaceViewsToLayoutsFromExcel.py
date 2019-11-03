@@ -69,14 +69,11 @@ def FindItemByIDName(items, ID, name):
     """
     for item in items:
         if item.name.strip() == name and item.uiId.strip() == ID:
-            print("item.name = ", item.name.strip(), "item.uiId = ", item.uiId.strip())
             return item
     for item in items:
         if '{} {}'.format(item.uiId.strip(), item.name.strip()) == name:
-            print("item.name = ", item.name.strip(), "item.uiId = ", item.uiId.strip())
             return item
         if '{}{}'.format(item.uiId.strip(), item.name.strip()) == name:
-            print("item.name = ", item.name.strip(), "item.uiId = ", item.uiId.strip())
             return item
     return None
 
@@ -96,7 +93,6 @@ def FindLayoutBookItemByIDName(ID, name):
     Функция ищет макет по ID и имени
     """
     layoutBookItem = FindItemByIDName(GetChildrenFromTree(layoutTree, subSetTree), ID, NAME)
-    print("layoutBookItem: ", layoutBookItem.name)
     if layoutBookItem is None:
         PrintError('Could not found layout book item: {}{} {}'.format(GetParentTree(), ID, NAME))
     return layoutBookItem
@@ -125,9 +121,7 @@ for row_idx in range(1, xl_sheet.nrows):
             ID = idCell.value.strip()
             NAME = xl_sheet.cell(row_idx, column_idx + 1).value.strip()
             MASTER_NAME = xl_sheet.cell(row_idx, column_idx + 3).value.strip()
-
             PARENT = GetParent(column_idx)
-            print(ID, ",", NAME)
             layoutBookItem = FindLayoutBookItemByIDName(ID, NAME)  # Определяем макет или поднабор по id и имени
             if MASTER_NAME == '':
                 subSetTree.append((layoutBookItem, column_idx))  # Если в текущей строке  Excel нет макета,
@@ -138,7 +132,6 @@ for row_idx in range(1, xl_sheet.nrows):
                     with DatabaseSwitchGuard(layoutBookItem.db):  # Если вид задан, то переходим к его созданию,
                         # при этом сохраняем создание одного чертежа в одну операцию
                         layoutSettings = GetLayoutSettings(layoutBookItem)  # Получаем доступ к настройкам макета
-                        print("Имя макета = ", layoutSettings.customLayoutNumber)
                         CreateDrawingFromView(VIEW_IDNAME, (layoutSettings.sizeX / 2000, layoutSettings.sizeY / 2000))
                         # Создаем чертеж в центре макета
                         placedViewNumber += 1
