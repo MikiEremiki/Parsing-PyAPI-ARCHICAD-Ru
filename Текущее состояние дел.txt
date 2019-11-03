@@ -16,6 +16,7 @@ GetNumberOfGroups
 GroupSimilarMorphs
 ListClickedElementMembers
 PlaceViewsToLayoutsFromExcel
+PrintElementStatistics
 
 Ролики обзоры и разборы записаны для:
 #3 ChangeLayerOfMorphs
@@ -33,6 +34,7 @@ PlaceViewsToLayoutsFromExcel
 #15 GroupSimilarMorphs
 #16 ListClickedElementMembers
 #17 PlaceViewsToLayoutsFromExcel
+#18 PrintElementStatistics
 
 Простой перевод функций сделан для:
 Alert
