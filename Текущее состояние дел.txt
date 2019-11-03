@@ -14,6 +14,7 @@ GenerateLayoutBookFromExcel - значимый
 GenerateLayoutBookFromTXT
 GetNumberOfGroups
 GroupSimilarMorphs
+ListClickedElementMembers
 
 Ролики обзоры и разборы записаны для:
 #3 ChangeLayerOfMorphs
@@ -29,10 +30,12 @@ GroupSimilarMorphs
 #13 GenerateLayoutBookFromTXT
 #14 GetNumberOfGroups
 #15 GroupSimilarMorphs
+#16 ListClickedElementMembers
 
 Простой перевод функций сделан для:
 Alert
 ApplyFavorite
+APIObject.List
 ChangeInfoString
 ChangeArc
 ChangeDrawing
