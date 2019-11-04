@@ -19,6 +19,7 @@ PlaceViewsToLayoutsFromExcel
 PrintElementStatistics
 PublishSet
 SetPropertiesToDefaultForClickedElement
+ZoneNumbering
 
 Ролики обзоры и разборы записаны для:
 #3 ChangeLayerOfMorphs
@@ -39,6 +40,7 @@ SetPropertiesToDefaultForClickedElement
 #18 PrintElementStatistics
 #19 PublishSet
 #20 SetPropertiesToDefaultForClickedElement
+#21 ZoneNumbering
 
 Простой перевод функций сделан для:
 Alert
@@ -49,6 +51,7 @@ ChangeArc
 ChangeDrawing
 ChangeElementHeader
 ChangeNavigatorItem
+ChangeZone
 CreateDrawing
 CreateText
 CreateWall
@@ -79,6 +82,7 @@ GetGroupedElements
 GetGroupOfElement
 GetPropertyDefinitionDictionary
 GetLayoutSettings
+GetZone
 SearchAttributeByName
 SetElementProperty
 PrintError
