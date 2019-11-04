@@ -22,7 +22,8 @@
 
         <h1>ChangeZone</h1>
         <p>
-            Modifies a Zone element.
+            (en)Modifies a Zone element.<br/>
+            (ru)Изменяет элемент зоны.
         </p>
         <pre><code class="python"><strong>def</strong> ChangeZone (element, memo) -> <strong>String</strong></code></pre>
 
@@ -30,25 +31,35 @@
         <h4>Parameters</h4>
         <dl>
             <dt><em>element</em></dt>
-            <dd>[in] An APIObject describing the element to modify.</dd>
+            <dd>[in] (en)An APIObject describing the element to modify.<br/>
+                [in] (ru)APIObject, описывающий элемент для изменения.
+            </dd>
 
             <dt><em>memo</em></dt>
-            <dd>[in] An APIObject containing the zone parameters. Only <code>addPars</code> is used.</dd>
+            <dd>[in] (en)An APIObject containing the zone parameters. Only <code>addPars</code> is used.<br/>
+                [in] (ru)APIObject, содержащий параметры зоны. Только <code>addPars</code> используется.
+            </dd>
         </dl>
 
         <p>&nbsp;</p>
         <h4>Return Values</h4>
-        <p>This function returns the GUID of the modified element.</p>
+        <p>(en)This function returns the GUID of the modified element.<br/>
+            (ru)Эта функция возвращает идентификатор GUID измененного элемента.
+        </p>
 
         <p>&nbsp;</p>
         <h4>Remarks</h4>
         <p>
-            This function is analogous to the ACAPI_Element_Change function of
+            (en)This function is analogous to the ACAPI_Element_Change function of
             the C++ API for Zone elements. By setting a member of the passed
-            APIObject you also mask it for the operation.
+            APIObject you also mask it for the operation.<br/>
+            (ru)Эта функция аналогична функции ACAPI_Element_Change из C++ API для элементов зоны.
+            Путем установки элемента пройденного APIObject вы также маскируете его для операции.
         </p>
         <p>
-            For information on how to fill the passed APIObject, visit the
+            (en)For information on how to fill the passed APIObject, visit the
+            <a href="http://archicadapi.graphisoft.com/documentation/api_zonetype">C++ documentation</a>.<br/>
+            (ru)Для получения информации о том, как заполнить переданный APIObject, посетите раздел
             <a href="http://archicadapi.graphisoft.com/documentation/api_zonetype">C++ documentation</a>.
         </p>
 
