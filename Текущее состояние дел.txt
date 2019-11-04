@@ -1,4 +1,4 @@
-Разобрал работу скриптов и написал комментарии:
+Разобрал работу скриптов, написал комментарии и записал к ним ролики обзоры и разборы:
 ApplyFavoriteToWalls
 ChangeInfoStringOfSelection
 ChangeLayerOfMorphs
@@ -8,39 +8,18 @@ CreateMorphFromOBJFile
 DoElementTest - значимый
 DoIOTest
 DrawChessBoard - значимый
-DrawLayoutBookTree
+DrawLayoutBookTree - значимый
 ExportPropertiesToExcelForClickedElement - значимый
 GenerateLayoutBookFromExcel - значимый
 GenerateLayoutBookFromTXT
 GetNumberOfGroups
 GroupSimilarMorphs
 ListClickedElementMembers
-PlaceViewsToLayoutsFromExcel
+PlaceViewsToLayoutsFromExcel - значимый
 PrintElementStatistics
-PublishSet
-SetPropertiesToDefaultForClickedElement
+PublishSet - значимый
+SetPropertiesToDefaultForClickedElement - значимый
 ZoneNumbering
-
-Ролики обзоры и разборы записаны для:
-#3 ChangeLayerOfMorphs
-#4 CheckInfoStringDuplicationForSelection
-#5 CheckInfoStringFormatForSelection
-#6 CreateMorphFromOBJFile
-#7 DoElementTest
-#8 DoIOTest
-#9 DrawChessBoard
-#10 DrawLayoutBookTree
-#11 ExportPropertiesToExcelForClickedElement
-#12 GenerateLayoutBookFromExcel
-#13 GenerateLayoutBookFromTXT
-#14 GetNumberOfGroups
-#15 GroupSimilarMorphs
-#16 ListClickedElementMembers
-#17 PlaceViewsToLayoutsFromExcel
-#18 PrintElementStatistics
-#19 PublishSet
-#20 SetPropertiesToDefaultForClickedElement
-#21 ZoneNumbering
 
 Простой перевод функций сделан для:
 Alert
