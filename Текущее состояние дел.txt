@@ -76,5 +76,6 @@ Open
 APIObject
 UndoScope
 DrawingData
+DatabaseSwitchGuard
 ModelerBody
 Types
